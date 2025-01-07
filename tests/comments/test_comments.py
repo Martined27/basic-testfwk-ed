@@ -1,13 +1,9 @@
 import pytest
-import requests
-from lib.utils import build_request_headers
+from config import APP_URL
+from lib.comments import Comments
+
 
 
 def test_get_all_comments(login_as_admin):
-
-    # Auth
-    request_header= build_request_headers(login_as_admin)
-    response = requests.get("http://localhost:8080/comments", headers=request_header)
+    response = Comments().get_all_comments(APP_URL, login_as_admin)
     assert response.ok
-
-
