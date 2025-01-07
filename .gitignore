@@ -1,0 +1,30 @@
+ # Byte-compiled Python files
+ *.py[cod]
+ 
+ # Log files
+ *.log
+ 
+ # Virtual environment files
+ venv/
+ env/
+ *.env
+ 
+ # IDE files
+ .vscode/
+ .idea/
+ *.iml
+ 
+ # Package files
+ *.egg-info/
+ dist/
+ build/
+ 
+ # OS files
+ .DS_Store
+ Thumbs.db
+ 
+ # Miscellaneous
+ *.tmp
+ *.bak
+ *.swp
+ *.pyc
