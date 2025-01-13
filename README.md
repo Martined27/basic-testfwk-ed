@@ -1,4 +1,4 @@
-# Basic-TestFWK
+# Basic-TestFWK-ED
 
 Basic-TestFWK is a lightweight and extensible testing framework designed for creating and running automated test cases in a simple and efficient manner. This framework is ideal for software QA engineers and developers looking for an easy-to-use solution for their testing needs.
 
@@ -44,25 +44,23 @@ Before using Basic-TestFWK, ensure the following are installed on your system:
 2. Use the following command to execute all tests:
 
    ```bash
-   python -m unittest discover -s tests
+   pytest --html=./reports/report.html  --self-contained-html "../basic-testfwk-ed/tests/comments/test_comments.py"
    ```
 
 3. View the test results in the terminal.
 
 ### Writing Test Cases
 
-1. Create a new file in the `tests/` directory (e.g., `test_example.py`).
-2. Define your test cases using Python's `unittest` module. For example:
+1. Create a new file in the `tests/` directory (e.g., `test_health.py`).
+2. Define your test cases using Python's `pytest` module. For example:
 
    ```python
-   import unittest
+   import pytest  
+   import requests
 
-   class TestExample(unittest.TestCase):
-       def test_sample(self):
-           self.assertEqual(1 + 1, 2)
-
-   if __name__ == "__main__":
-       unittest.main()
+   def test_health():
+      response = requests.get("http://localhost:8080/health")
+      assert response.ok 
    ```
 
 3. Save the file and run the tests as described in the "Running Tests" section.
