@@ -3,6 +3,7 @@
 
 # Log files
 *.log
+*.pyc
 
 # Virtual environment files
 venv/
