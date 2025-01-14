@@ -31,3 +31,4 @@ Thumbs.db
 **/.pytest-cache/
 pytest-cache/
 reports/
+secrets.ini

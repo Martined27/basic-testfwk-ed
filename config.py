@@ -1,11 +1,12 @@
 import logging
+import os
 import re
 import requests
 
 SESSION = requests.Session()
-APP_URL = "http://localhost:8080"
-ADMIN_USERNAME = "admin"
-ADMIN_PASSWORD = "admin"
+APP_URL = os.getenv("APP_URL", "http://localhost:8080")
+ADMIN_USERNAME = os.getenv("ADMIN_USERNAME", "")
+ADMIN_PASSWORD = os.getenv("ADMIN_PASSWORD", "")
 
 LOG = logging.getLogger()
 

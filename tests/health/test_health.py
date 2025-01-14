@@ -1,7 +1,8 @@
-import pytest  
 import requests
+from config import LOG
 
 def test_health():
-    response = requests.get("http://localhost:8080/health")
+    LOG.info("test_health")
+    response = requests.get("http://host.docker.internal:8080/health")
     assert response.ok 
     
